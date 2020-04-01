@@ -1,4 +1,3 @@
-
 exports.up = function(knex) {
   return knex.schema
     .createTable('projects', col => {
@@ -16,8 +15,6 @@ exports.up = function(knex) {
         col.string('skills_name',128).notNullable();
         col.varchar('img_url',500).notNullable();
     })
-
-  
 };
 
 exports.down = function(knex) {

@@ -6,14 +6,16 @@ module.exports = {
     findById,
 };
 
-// async function add(project) {
-//     const [ id ] = await db("projects").insert(project, "id");
-//     return findById(id);
-// }
-
-
 function find() {
-    return db("projects").select("id", "project_title");
+    return db("projects").select(
+        "id",
+        "project_title",
+        "img_url",
+        "project_desc",
+        "tech_used",
+        "project_url",
+        "github_repo"
+        );
 }
 
 function findById(id) {
