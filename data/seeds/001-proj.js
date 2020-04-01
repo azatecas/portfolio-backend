@@ -6,40 +6,22 @@ exports.seed = function(knex) {
       return knex('projects').insert([
         {
           id: 1, 
-          img_url: 'rowValue1',
-          project_title: 'sample',
-          project_desc: 'this is description',
-          tech_used: 'knex,express,node',
+          img_url: 'https://i.imgur.com/nuRudAI.png',
+          project_title: 'Portfolio',
+          project_desc: 'Complete FullStack site created by me(Luis Pepen), as a way to showcase my front end and backend abilities',
+          tech_used: 'CSS, JavaScript, React, Node, Express, SQLite',
           project_url: 'www.luisunlimited.com',
-          github_repo: 'github.com/azatecas'
+          github_repo: 'https://github.com/azatecas/portfolio-luis'
         },
         {
           id: 2, 
-          img_url: 'rowValue2',
-          project_title: 'sample2',
-          project_desc: 'this is description2',
-          tech_used: 'knex,express,node2',
-          project_url: 'www.luisunlimited.com2',
-          github_repo: 'github.com/azatecas2'
-        },
-        {
-          id: 3, 
-          img_url: 'rowValue3',
-          project_title: 'sample3',
-          project_desc: 'this is description3',
-          tech_used: 'knex,express,node3',
-          project_url: 'www.luisunlimited.com3',
-          github_repo: 'github.com/azatecas3'
-        },
-        {
-          id: 4, 
-          img_url: 'rowValue4',
-          project_title: 'sample4',
-          project_desc: 'this is description4',
-          tech_used: 'knex,express,node4',
-          project_url: 'www.luisunlimited.com4',
-          github_repo: 'github.com/azatecas4'
-        },
+          img_url: 'https://i.imgur.com/BfFktlc.png',
+          project_title: 'Avatar:TLA fan Page',
+          project_desc: 'This is a fan page that fetches data from an open Rest API. This project utilizes axios and Client side pagination',
+          tech_used: 'CSS, JavaScript, Axios, React, Redux',
+          project_url: 'https://avatar-alpha.now.sh/',
+          github_repo: 'https://github.com/azatecas/avatar-single-page-app'
+        },        
         
       ]);
     })
