@@ -8,20 +8,38 @@ exports.seed = function(knex) {
           id: 1, 
           img_url: 'https://i.imgur.com/nuRudAI.png',
           project_title: 'Portfolio',
-          project_desc: 'Complete FullStack site created by me(Luis Pepen), as a way to showcase my front end and backend abilities',
-          tech_used: 'CSS, JavaScript, React, Node, Express, SQLite',
+          project_desc: 'Complete FullStack site created by me (Luis Pepen), as a way to showcase my front end and backend abilities, this site fetches data from a custom REST api',
+          tech_used: 'CSS, JavaScript, React, Node, Express, SQLite, Zeit',
           project_url: 'www.luisunlimited.com',
           github_repo: 'https://github.com/azatecas/portfolio-luis'
         },
         {
           id: 2, 
-          img_url: 'https://i.imgur.com/BfFktlc.png',
-          project_title: 'Avatar:TLA fan Page',
-          project_desc: 'This is a fan page that fetches data from an open Rest API. This project utilizes axios and Client side pagination',
-          tech_used: 'CSS, JavaScript, Axios, React, Redux',
+          img_url: 'https://i.imgur.com/r1ZuH0y.png',
+          project_title: 'ATLA Fan Page',
+          project_desc: 'This is a fan page that fetches data from an open Rest API. This project utilizes Axios and Client side pagination, it was later refactored to include more CSS animations',
+          tech_used: 'CSS, JavaScript, Axios, React, Redux, Particle.js, Zeit',
           project_url: 'https://avatar-alpha.now.sh/',
           github_repo: 'https://github.com/azatecas/avatar-single-page-app'
-        },        
+        },
+        {
+          id: 3, 
+          img_url: 'https://i.imgur.com/QzKKuEb.png',
+          project_title: 'Water my plants',
+          project_desc: 'This is a team Buildweek project in which i was assigned the role of React II Developer and had to add CRUD functionality with React and Redux to this project. Dashboard allows you to create, add, edit, and delete any plants in your dashboard',
+          tech_used: 'CSS, JavaScript, Axios, React, Redux, Auth Tokens, Zeit',
+          project_url: 'https://front-end-2-five.now.sh/dashboard',
+          github_repo: 'https://github.com/Build-Week-Water-My-Plants-01/Front-End'
+        },
+        {
+          id: 4, 
+          img_url: 'https://i.imgur.com/c63JJmt.png',
+          project_title: 'Marketing Page UI',
+          project_desc: 'This is a team Buildweek project in which i was assigned the role of Marketing UI Developer, I had to build and deploy a static Marketing Page UI for a Weightlifting App project',
+          tech_used: 'HTML, CSS, JavaScript, Netlify',
+          project_url: 'https://ui-weightlifting.netlify.com/',
+          github_repo: 'https://github.com/Build-Week-Water-My-Plants-01/Front-End'
+        },         
         
       ]);
     })
@@ -45,7 +63,7 @@ exports.seed = function(knex) {
         {
           id: 4,
           skills_name: 'LESS',
-          img_url: 'https://www.vectorlogo.zone/util/preview.html?image=/logos/lesscss/lesscss-ar21.svg'
+          img_url: 'https://www.vectorlogo.zone/logos/lesscss/lesscss-ar21.svg'
         },
         {
           id: 5,
