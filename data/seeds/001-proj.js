@@ -33,6 +33,15 @@ exports.seed = function(knex) {
         },
         {
           id: 4, 
+          img_url: 'https://i.imgur.com/Xf9GXto.png',
+          project_title: 'Sauti Studio',
+          project_desc: 'Team buildweek application that allows you to design menu flows for lowend feature forms in emerging markets. My role was to create the Login/signUp components, create a custom React Hook for form validation, and style the application using Styled-Components library',
+          tech_used: 'React, Redux, Custom React Hooks, CSS, Javascript, Zeit',
+          project_url: 'https://sauti-styled.now.sh/',
+          github_repo: 'https://github.com/Sauti-Studio3/Front-End'
+        },
+        {
+          id: 5, 
           img_url: 'https://i.imgur.com/c63JJmt.png',
           project_title: 'Marketing Page UI',
           project_desc: 'This is a team Buildweek project in which i was assigned the role of Marketing UI Developer, I had to build and deploy a static Marketing Page UI for a Weightlifting App project',
