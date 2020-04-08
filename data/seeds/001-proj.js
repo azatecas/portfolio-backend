@@ -126,5 +126,15 @@ exports.seed = function(knex) {
         },
               
       ])
+      
     })
+    .then(function () {
+      return knex('users').insert([
+        {
+          username:"luis",
+          password: "super",
+          admin:true,
+        },
+      ])
+     })
 };

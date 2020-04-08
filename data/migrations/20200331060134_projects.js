@@ -11,14 +11,21 @@ exports.up = function(knex) {
     })
 
     .createTable('skills', col => {
-        col.increments();
-        col.string('skills_name',128).notNullable();
-        col.varchar('img_url',500).notNullable();
+      col.increments();
+      col.string('skills_name',128).notNullable();
+      col.varchar('img_url',500).notNullable();
     })
+    .createTable('users', col => {
+      col.increments();
+      col.string('username', 20).notNullable();
+      col.varchar('password', 40).notNullable();
+      col.boolean('admin');
+  })
 };
 
 exports.down = function(knex) {
   return knex.schema
+    .dropTableIfExists('users')
     .dropTableIfExists('skills')
     .dropTableIfExists('projects')
 };
