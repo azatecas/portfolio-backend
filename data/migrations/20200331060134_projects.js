@@ -17,9 +17,8 @@ exports.up = function(knex) {
     })
     .createTable('users', col => {
       col.increments();
-      col.string('username', 20).notNullable();
+      col.string('username', 20).notNullable().unique();
       col.varchar('password', 40).notNullable();
-      col.boolean('admin');
   })
 };
 

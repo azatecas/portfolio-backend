@@ -2,17 +2,17 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const router = require("express").Router();
 
-const { jwtSecret } = require("./secretsecret.js");
+const { jwtSecret } = require("./secret.js");
 const Users = require("../users/users-model");
 
 function generateToken(user) {
     const payload = {
+        subject: user.id,
         username: user.username,
-        department: user.department
-    }
+    };
 
     const options = {
-        expiresIn: "35m"
+        expiresIn: "30m"
     };
     return jwt.sign(payload, jwtSecret, options);
 }

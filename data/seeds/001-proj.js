@@ -133,7 +133,6 @@ exports.seed = function(knex) {
         {
           username:"luis",
           password: "super",
-          admin:true,
         },
       ])
      })

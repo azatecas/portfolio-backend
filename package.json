@@ -4,7 +4,8 @@
   "description": "backend for my porfolio RESTful api",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "server": "nodemon index.js"
   },
   "repository": {
     "type": "git",
