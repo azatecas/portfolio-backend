@@ -1,7 +1,6 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const router = require("express").Router();
-
 const { jwtSecret } = require("./secret.js");
 const Users = require("../users/users-model");
 
@@ -41,6 +40,7 @@ router.post("/login", (req, res) => {
       .then(user => {
         if (user && bcrypt.compareSync(password, user.password)) {
           const token = generateToken(user);
+
           res.status(200).json({
             welcome: user.username,
             token
