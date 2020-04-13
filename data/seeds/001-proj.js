@@ -3,6 +3,7 @@ exports.seed = function(knex) {
   // Deletes ALL existing entries
   return knex('projects').truncate()
     .then(function () {
+
       return knex('projects').insert([
         {
           id: 1, 
@@ -52,6 +53,10 @@ exports.seed = function(knex) {
         
       ]);
     })
+
+
+
+
     .then(function () {
       return knex('skills').insert([
         {
