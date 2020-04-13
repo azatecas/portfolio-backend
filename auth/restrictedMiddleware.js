@@ -6,7 +6,7 @@ module.exports = (req, res, next) => {
     const { authorization } = req.headers;
 
     if(authorization){
-        console.log('auth',authorization);
+        console.log('auth2',authorization);
         jwt.verify(authorization, jwtSecret, (err, decodedToken) => {
             if(err){
                 res.status(401).json({ message: "invalid credentials rm"});

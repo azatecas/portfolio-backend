@@ -1,5 +1,9 @@
 const router = require('express').Router();
 const Skills = require('./skills-model.js');
+const restricted = require('../auth/restrictedMiddleware.js');
+
+
+
 
 router.get("/", (req, res) => {
     Skills
@@ -13,7 +17,7 @@ router.get("/", (req, res) => {
         })
 })
 
-router.post("/", (req, res) => {
+router.post("/", restricted, (req, res) => {
     let body = req.body
     if(!body.skills_name || !body.img_url){
         res.status(400).json({ message: "skills_name & img_url fields required!"})
@@ -21,14 +25,16 @@ router.post("/", (req, res) => {
     Skills
         .add(body)
         .then(skill => {
-            res.status(201).json(skill)
+            res.status(201).json({skil: skill,
+                res: restricted
+            })
         })
         .catch(err => {
             res.status(500).json({ message: "failed to add new skill"})
         })
 })
 
-router.put("/:id", (req, res) => {
+router.put("/:id", restricted, (req, res) => {
     const { id } = req.params;
     const changes = req.body;
 
@@ -52,7 +58,7 @@ router.put("/:id", (req, res) => {
 
 
 
-router.delete("/:id", (req, res) => {
+router.delete("/:id", restricted, (req, res) => {
     const { id } = req.params
     
     Skills
