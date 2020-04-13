@@ -44,6 +44,9 @@ router.put("/:id", (req, res) => {
                 res.status(404).json({message: 'could not find skill with that ID'})
             }
         })
+        .catch(err => {
+            res.status(500).json({ message: `Failed to update skill id:${id}`})
+        })
 })
 
 
