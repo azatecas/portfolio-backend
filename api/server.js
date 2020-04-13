@@ -2,10 +2,12 @@ const express = require('express');
 const helmet = require('helmet');
 const CORS = require('cors');
 
+//restriction middleware
 const restricted = require('../auth/restrictedMiddleware');
 
 //rate limiter middleware
 const apiLimiter = require('../middleware/rateLimiter');
+const authLimiter = require('../middleware/authRateLimiter');
 
 //Routers
 const projectsRouter = require('../projects/projects-router');
@@ -23,8 +25,8 @@ server.use(apiLimiter);
 
 server.use('/api/skills', skillsRouter);
 server.use('/api/projects', projectsRouter);
-server.use('/api/users', restricted, userRouter);
-server.use('/api/auth', authRouter);
+server.use('/api/users', userRouter);
+server.use('/api/auth', authLimiter, authRouter);
 
 server.get('/', (req, res) => {
     res.json({serverStatus: "Running🏃‍♂️"});
