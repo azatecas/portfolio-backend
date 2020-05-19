@@ -31,8 +31,10 @@ server.use(apiLimiter);
 server.use('/api/info', infoRouter);
 server.use('/api/skills', skillsRouter);
 server.use('/api/projects', projectsRouter);
-server.use('/api/users', userRouter);
-server.use('/api/auth', authLimiter, authRouter);
+
+//Not ready jet
+// server.use('/api/users', userRouter);
+// server.use('/api/auth', authLimiter, authRouter);
 
 //base route
 server.get('/', (req, res) => {

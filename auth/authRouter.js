@@ -4,6 +4,10 @@ const router = require("express").Router();
 const { jwtSecret } = require("./secret.js");
 const Users = require("../users/users-model");
 
+const axios = require('axios');
+
+require('dotenv').config();
+
 function generateToken(user) {
     const payload = {
         subject: user.id,
@@ -30,7 +34,10 @@ router.post("/register", (req, res) => {
             res.status(200).json(user);
         })
         .catch(err => res.send({errorMessage: err.message}))
-})
+
+
+});
+
 
 router.post("/login", (req, res) => {
     const { username, password } = req.body;
@@ -63,7 +70,7 @@ router.get("/logout", (req, res) => {
             .status(500)
             .json({
               message:
-                "hotel california quote",
+                "this is a weird error",
             });
         } else {
           res.status(200).json({ message: "logged out successful" });
