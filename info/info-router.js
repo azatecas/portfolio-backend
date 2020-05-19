@@ -1,15 +1,13 @@
 const router = require('express').Router();
-const Skills = require('./skills-model.js');
+const Info = require('./info-model.js');
 const restricted = require('../auth/restrictedMiddleware.js');
 
 
-
-
 router.get("/", (req, res) => {
-    Skills
+    Info
         .find()
-        .then(skill => {
-            res.status(200).json(skill);
+        .then(info => {
+            res.status(200).json(info);
         })
         .catch(err => {
             console.log(err)
@@ -19,18 +17,16 @@ router.get("/", (req, res) => {
 
 router.post("/", restricted, (req, res) => {
     let body = req.body
-    if(!body.skills_name || !body.img_url){
-        res.status(400).json({ message: "skills_name & img_url fields required!"})
+    if(!body.name || !body.bio || !body.github || !body.linkedin || !body.img_url){
+        res.status(400).json({ message: "required fields missing: name, bio, github, linkedin, img_url"})
     }    
-    Skills
+    Info
         .add(body)
-        .then(skill => {
-            res.status(201).json({skil: skill,
-                res: restricted
-            })
+        .then(info => {
+            res.status(201).json({ info: info })
         })
         .catch(err => {
-            res.status(500).json({ message: "failed to add new skill"})
+            res.status(500).json({ message: "failed to add new info"})
         })
 })
 
@@ -38,7 +34,7 @@ router.put("/:id", restricted, (req, res) => {
     const { id } = req.params;
     const changes = req.body;
 
-    Skills
+    Info
         .findById(id)
         .then(skill => {
             if(skill) {
@@ -47,21 +43,19 @@ router.put("/:id", restricted, (req, res) => {
                     res.json(updatedSkill);
                 })
             } else {
-                res.status(404).json({message: 'could not find skill with that ID'})
+                res.status(404).json({message: 'could not find bio with that ID'})
             }
         })
         .catch(err => {
-            res.status(500).json({ message: `Failed to update skill id:${id}`})
+            res.status(500).json({ message: `Failed to update bio id:${id}`})
         })
 })
-
-
 
 
 router.delete("/:id", restricted, (req, res) => {
     const { id } = req.params
     
-    Skills
+    Info
         .remove(id)
         .then(() => {
              res.json({ removed: id }); 

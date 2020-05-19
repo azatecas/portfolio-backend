@@ -11,32 +11,43 @@ module.exports = {
 };
 
 function find() {
-    return db("skills").select("id", 
-    'skills_name',
-    'img_url');
+    return db("info")
+        .select(
+            'id', 
+            'name',
+            'bio',
+            'github',
+            'linkedin',
+            'img_url'
+        );
 }
 
 function findById(id) {
-    return db("skills")
+    return db("info")
             .where({ id })
-            .select('id',
-                'skills_name',
-                'img_url')
+            .select(
+                'id', 
+                'name',
+                'bio',
+                'github',
+                'linkedin',
+                'img_url'
+            )
             .first();
 }
 
 function findBy(param) {
-    return db("skills")
+    return db("info")
             .where(param);
 }
 
 function add(newSkill) {
-    return db("skills")
+    return db("info")
     .insert(newSkill);
 }
 
 function update(changes, id) {
-    return db("skills")
+    return db("info")
     .where({ id })
     .update(changes)
     .then(() => {
@@ -46,7 +57,7 @@ function update(changes, id) {
 
 function remove(id){
     let toRemove = findById(id) || null;
-    return db("skills")
+    return db("info")
     .where({ id })
     .del(id)
     .then(() => {
