@@ -16,6 +16,7 @@ const skillsRouter = require('../skills/skills-router');
 const userRouter = require('../users/users-router');
 const authRouter = require('../auth/authRouter');
 const infoRouter = require('../info/info-router');
+const contactRouter = require('../contact/contactRouter');
 
 //declare server
 const server = express();
@@ -31,6 +32,7 @@ server.use(apiLimiter);
 server.use('/api/info', infoRouter);
 server.use('/api/skills', skillsRouter);
 server.use('/api/projects', projectsRouter);
+server.use('/api/contact', contactRouter);
 
 //Not ready jet
 // server.use('/api/users', userRouter);
