@@ -1,7 +1,9 @@
 const router = require('express').Router();
 const nodemailer = require('nodemailer');
 
+
 router.post("/", (req,res) => {
+    console.log("BODYYYYYYYYYYYYYYY", req.body)
     const { name,email, subject, message } = req.body;
     
       // create reusable transporter object using the default SMTP transport
@@ -14,10 +16,10 @@ router.post("/", (req,res) => {
     });
 
     let mailOptions = {
-        from:` "${name}" <${email}>`,
+        from:` "${name}" ${email}`,
         to:process.env.EMAIL,
         subject: subject,
-        text:message
+        text:`name: ${name}, email: ${email}, message ${message}`
     }
 
       // send mail with defined transport object
@@ -26,7 +28,8 @@ router.post("/", (req,res) => {
             res.json({Email: "SENT SUCCESFULLY "});
         })
         .catch(err => {
-            res.status(500).json({Error: err})
+            res.status(500).json({Error: "THREE WAS A PROBLEM SENDING YOUR MESSAGE, TRY AGAIN LATER"})
+            console.log(err)
         })   
 })
 
