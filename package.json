@@ -28,7 +28,7 @@
     "express-session": "^1.17.0",
     "helmet": "^3.22.0",
     "jsonwebtoken": "^8.5.1",
-    "knex": "^0.20.13",
+    "knex": "^0.21.4",
     "nodemailer": "^6.4.10",
     "sqlite3": "^4.1.1"
   },
