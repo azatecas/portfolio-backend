@@ -2,7 +2,6 @@ const router = require("express").Router();
 const nodemailer = require("nodemailer");
 
 router.post("/", (req, res) => {
-  console.log("????????????????????????????????", req.body);
   const { name, email, subject, message } = req.body;
 
   // create reusable transporter object using the default SMTP transport
@@ -18,7 +17,6 @@ router.post("/", (req, res) => {
     from: ` "${name}" ${email}`,
     to: process.env.EMAIL,
     subject: subject,
-    // text: `name: ${name}, email: ${email}, message ${message}`,
     html: `<h3 style="color:blue;">Name: ${name}</h3> 
     <h3>Subject: ${subject}</h3>
     <h3>Email: ${email}</h3>
