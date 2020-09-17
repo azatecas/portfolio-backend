@@ -7,8 +7,6 @@ This is the Back End Portion of Luis Pepen's [Web Portfolio](https://github.com/
 
 | Method | Endpoint                                     | Access Control | Description                                                                                                                                                                                                                                      |
 | ------ | -------------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-
-
 | GET    | `/api/projects/`            |                | Returns all projects in the database.
 |
 | POST   | `/api/projects/`            |                | Adds new project to the the database
