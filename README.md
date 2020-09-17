@@ -7,12 +7,9 @@ This is the Back End Portion of Luis Pepen's [Web Portfolio](https://github.com/
 
 | Method | Endpoint                                     | Access Control | Description                                                                                                                                                                                                                                      |
 | ------ | -------------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/projects/`            |                | Returns all projects in the database.
-|
-| POST   | `/api/projects/`            |                | Adds new project to the the database
-|
-| PUT    | `/api/projects/:id`            |                | Edits a specific Project in the Database by id
-|
+| GET    | `/api/projects/`            |                | Returns all projects in the database.|
+| POST   | `/api/projects/`            |                | Adds new project to the the database|
+| PUT    | `/api/projects/:id`            |                | Edits a specific Project in the Database by id|
 | POST   | `/api/projects/:id`            |                | Deletes a specific Project in the Database by id
 |
 | GET    | `/api/skills/` |                | Returns all skills in the database
