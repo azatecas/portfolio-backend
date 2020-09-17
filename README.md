@@ -21,7 +21,23 @@ This is the Back End Portion of Luis Pepen's [Web Portfolio](https://github.com/
 | PUT    | `/api/skills/:id` |                | Edits skills in the database by id|
 | DELETE | `/api/skills/:id` |                | Deletes skills in the database by id|
 
+# Data Model
 
+#### Projects
+
+---
+
+```
+{
+  id: INT,
+  img_url: STRING,
+  project_title: STRING,
+  project_des: STRING,
+  tech_used: STRING,
+  project_url: STRING,
+  rep: STRING  
+}
+```
 Technologies used in this project:
 
     Node.js
