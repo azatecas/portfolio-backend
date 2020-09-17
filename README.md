@@ -7,21 +7,21 @@ This is the Back End Portion of Luis Pepen's [Web Portfolio](https://github.com/
 
 | Method | Endpoint                                     | Access Control | Description                                                                                                                                                                                                                                      |
 | ------ | -------------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/projects/`            |                | Returns all projects in the database.|
-| POST   | `/api/projects/`            |                | Adds new project to the the database|
-| PUT    | `/api/projects/:id`            |                | Edits a specific Project in the Database by id|
-| POST   | `/api/projects/:id`            |                | Deletes a specific Project in the Database by id|
+| GET    | `/api/projects/`            |       CORS         | Returns all projects in the database.|
+| POST   | `/api/projects/`            |          CORS       | Adds new project to the the database|
+| PUT    | `/api/projects/:id`            |      CORS           | Edits a specific Project in the Database by id|
+| POST   | `/api/projects/:id`            |         CORS        | Deletes a specific Project in the Database by id|
 
 #### Skills Routes
 
 | Method | Endpoint                                     | Access Control | Description                                                                                                                                                                                                                                      |
 | ------ | -------------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/skills/` |                | Returns all skills in the database|
-| POST   | `/api/skills/` |                | Adds skills in the database|
-| PUT    | `/api/skills/:id` |                | Edits skills in the database by id|
-| DELETE | `/api/skills/:id` |                | Deletes skills in the database by id|
+| GET    | `/api/skills/` |           CORS      | Returns all skills in the database|
+| POST   | `/api/skills/` |         CORS        | Adds skills in the database|
+| PUT    | `/api/skills/:id` |        CORS         | Edits skills in the database by id|
+| DELETE | `/api/skills/:id` |        CORS         | Deletes skills in the database by id|
 
-# Data Model
+## Data Model
 
 #### Projects
 
@@ -36,6 +36,18 @@ This is the Back End Portion of Luis Pepen's [Web Portfolio](https://github.com/
   tech_used: STRING,
   project_url: STRING,
   rep: STRING  
+}
+```
+
+#### Skills
+
+---
+
+```
+{
+  id: INT,
+  img_url: STRING,
+  skills_name: STRING
 }
 ```
 Technologies used in this project:
