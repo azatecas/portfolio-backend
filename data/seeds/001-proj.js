@@ -128,62 +128,65 @@ exports.seed = function (knex) {
         },
         {
           id: 6,
+          skills_name: "TypeScript",
+          img_url:
+            "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
+        },
+        {
+          id: 7,
           skills_name: "Python",
           img_url:
             "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
         },
         {
-          id: 7,
+          id: 8,
           skills_name: "ReactJS",
-          img_url:
-            "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+          img_url: "https://i.imgur.com/sBOKqzY.png",
         },
         {
-          id: 8,
+          id: 9,
+          skills_name: "React Native",
+          img_url: "https://i.imgur.com/sBOKqzY.png",
+        },
+        {
+          id: 10,
           skills_name: "Redux",
           img_url: "https://cdn.worldvectorlogo.com/logos/redux.svg",
         },
         {
-          id: 9,
-          skills_name: "React Router",
-          img_url:
-            "https://seeklogo.com/images/R/react-router-logo-AB5BFB638F-seeklogo.com.png",
-        },
-        {
-          id: 10,
-          skills_name: "NodeJS",
-          img_url:
-            "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
-        },
-        {
           id: 11,
+          skills_name: "NodeJS",
+          img_url: "https://i.imgur.com/vcx0Rhh.png",
+        },
+        {
+          id: 12,
           skills_name: "Express",
           img_url:
             "https://seeklogo.com/images/E/express-js-logo-FA36FF1D3F-seeklogo.com.png",
         },
         {
-          id: 12,
+          id: 13,
           skills_name: "SQLite",
           img_url:
             "https://upload.wikimedia.org/wikipedia/commons/9/97/Sqlite-square-icon.svg",
         },
         {
-          id: 13,
+          id: 14,
           skills_name: "PostgreSQL",
           img_url:
             "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg",
         },
         {
-          id: 14,
+          id: 15,
           skills_name: "Git",
           img_url:
-            "https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg",
+            "https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg",
         },
         {
-          id: 15,
-          skills_name: "Github",
+          id: 16,
+          skills_name: "Django",
           img_url:
-            "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
+            "https://static.djangoproject.com/img/logos/django-logo-negative.svg",
         },
       ]);
     })
